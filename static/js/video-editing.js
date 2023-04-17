@@ -40,6 +40,7 @@ async function cutVideo(id, timestamps){
 
     var new_id = await makeRequest("/api/cuts/", data);
     id = new_id["id"];
+    console.log(`c% current id: ${id}`, `color: red`)
     
     download_url = await getVideo(new_id["id"]);
     let url = download_url["url"];
